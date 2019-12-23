@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@color/colorPrimary"
+        app:layout_constraintDimensionRatio="H,15:9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:src="@mipmap/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_confirm"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:src="@mipmap/ic_confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="标题"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/et_title"
+        app:layout_constraintStart_toEndOf="@id/iv_back"
+        app:layout_constraintEnd_toStartOf="@id/iv_confirm"
+        app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:hint="生日，纪念日，节日，考试..."
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintBottom_toTopOf="@id/tv_remark"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_remark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="备注"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/et_title"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/et_title" />
+
+    <EditText
+        android:id="@+id/et_remark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:hint="想说的话，目标，格言..."
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_remark" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="日期"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/iv_image" />
+
+    <TextView
+        android:id="@+id/tv_date1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#bfbfbf"
+        android:text="长按使用日期计算器"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toStartOf="@id/tv_date"
+        app:layout_constraintTop_toTopOf="@id/tv_date"
+        app:layout_constraintBottom_toBottomOf="@id/tv_date1"
+        android:src="@mipmap/ic_date"
+        android:padding="10dp"
+        android:id="@+id/iv_date"/>
+
+    <TextView
+        android:id="@+id/tv_repeat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="重复设置"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/iv_date" />
+
+    <TextView
+        android:id="@+id/tv_repeat1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="#bfbfbf"
+        android:text="无"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_repeat" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toStartOf="@id/tv_repeat"
+        app:layout_constraintTop_toTopOf="@id/tv_repeat"
+        app:layout_constraintBottom_toBottomOf="@id/tv_repeat1"
+        android:src="@mipmap/ic_repeat"
+        android:padding="10dp"
+        android:id="@+id/iv_repeat"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@id/tv_repeat"
+        app:layout_constraintTop_toBottomOf="@id/iv_repeat"
+        android:src="@mipmap/ic_picture"
+        android:padding="10dp"
+        android:id="@+id/iv_picture"/>
+
+    <TextView
+        android:id="@+id/tv_picture"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="图片"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintBottom_toBottomOf="@id/iv_picture"
+        app:layout_constraintTop_toTopOf="@id/iv_picture" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
